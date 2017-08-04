@@ -2,10 +2,11 @@
 var Doctor = require('./../js/doctor.js').doctorModule;
 
 
-var medicalIssue = function(resultData) {
-  $('.nasa-explanation').text("This is a test " + nasaData1);
-  $('.nasa-image').append('<img id="nasa-img" src="' + nasaData2 + '">');
-};
+// var medicalIssue = function(resultData) {
+//   // resultData.forEach(function(element)) {
+//   //   $('#doctors').append("<li>" + element + "</li>");
+//   // });
+// };
 
 $(document).ready(function() {
   $('#doctor-form').submit(function(event) {

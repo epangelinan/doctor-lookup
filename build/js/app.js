@@ -25,9 +25,15 @@ function Doctor(){
 
 Doctor.prototype.getDoctors = function(medicalIssue) {
   $.get('https://api.betterdoctor.com/2016-03-01/doctors?query='+ medicalIssue+'&location=45.5231%2C-122.6765%2C%205&user_location=45.5231%2C-122.6765&skip=0&limit=20&user_key=' + apiKey)
-   .then(function(result) {
-      console.log(result);
-      medicalIssue(result.data);
+   .then(function(results) {
+      console.log(results);
+      console.log(results.data);
+      console.log(results.meta);
+      var doctorNames = results.data;
+      doctorNames.forEach(function(name) {
+        $('#doctors').append('<li>' + name.item_type + '</li>');
+        console.log(name.item_type);
+      });
     })
    .fail(function(error){
       console.log("fail");
@@ -41,10 +47,11 @@ exports.doctorModule = Doctor;
 var Doctor = require('./../js/doctor.js').doctorModule;
 
 
-var medicalIssue = function(resultData) {
-  $('.nasa-explanation').text("This is a test " + nasaData1);
-  $('.nasa-image').append('<img id="nasa-img" src="' + nasaData2 + '">');
-};
+// var medicalIssue = function(resultData) {
+//   // resultData.forEach(function(element)) {
+//   //   $('#doctors').append("<li>" + element + "</li>");
+//   // });
+// };
 
 $(document).ready(function() {
   $('#doctor-form').submit(function(event) {
