@@ -6,7 +6,7 @@
 
 ## Description
 
-_This is a JavaScript app utilizing an API from https://developer.betterdoctor.com/.  The user is presented with a form where they can enter a certain medical issue, i.e. rash, sore throat, etc.  After hitting the Submit button, a list of nearby doctors that can treat the medical issue is shown. }_
+_This is a JavaScript app utilizing an API from https://developer.betterdoctor.com/.  The user is presented with a form where they can enter a certain medical issue, i.e. rash, sore throat, etc.  After hitting the Submit button, a list of nearby doctors that can treat the medical issue is shown._
 
 ## Setup/Installation Requirements
 
