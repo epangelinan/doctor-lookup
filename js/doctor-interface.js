@@ -11,6 +11,7 @@ var Doctor = require('./../js/doctor.js').doctorModule;
 $(document).ready(function() {
   $('#doctor-form').submit(function(event) {
     event.preventDefault();
+    $('#doctors').empty();
     console.log("we got here");
     var medicalIssue = $('#medical-issue').val();
     var doctorInfo = new Doctor();
